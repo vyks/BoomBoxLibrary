@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-global, lowercase-global, deprecated
 if game.CoreGui:FindFirstChild("NordUi") then
     game.CoreGui:FindFirstChild("NordUi"):Destroy()
     game.StarterGui:SetCore('SendNotification',
