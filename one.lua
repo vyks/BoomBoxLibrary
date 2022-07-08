@@ -30,7 +30,7 @@ UICorner_3 = Instance.new("UICorner")
 SubDecor2 = Instance.new("Frame")
 UICorner_4 = Instance.new("UICorner")
 Title = Instance.new("TextLabel")
-SectionsFrame = Instance.new("Frame")
+SectionFrames = Instance.new("Frame")
 UIPageLayout = Instance.new("UIPageLayout")
 UIPadding = Instance.new("UIPadding")
 SupportFrame = Instance.new("Frame")
@@ -135,24 +135,24 @@ Title.Text = "Free Boombox Visualizer"
 Title.TextColor3 = Color3.fromRGB(216, 222, 233)
 Title.TextSize = 14.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
-SectionsFrame.Name = "SectionsFrame"
-SectionsFrame.Parent = NordScheme
-SectionsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SectionsFrame.BackgroundTransparency = 1.000
-SectionsFrame.BorderSizePixel = 0
-SectionsFrame.ClipsDescendants = true
-SectionsFrame.Position = UDim2.new(0, 105, 0, 25)
-SectionsFrame.Size = UDim2.new(0, 240, 0, 220)
-UIPageLayout.Parent = SectionsFrame
+SectionFrames.Name = "SectionFrames"
+SectionFrames.Parent = NordScheme
+SectionFrames.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SectionFrames.BackgroundTransparency = 1.000
+SectionFrames.BorderSizePixel = 0
+SectionFrames.ClipsDescendants = true
+SectionFrames.Position = UDim2.new(0, 105, 0, 25)
+SectionFrames.Size = UDim2.new(0, 240, 0, 220)
+UIPageLayout.Parent = SectionFrames
 UIPageLayout.FillDirection = Enum.FillDirection.Vertical
 UIPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIPageLayout.EasingStyle = Enum.EasingStyle.Exponential
 UIPageLayout.Padding = UDim.new(0, 10)
-UIPadding.Parent = SectionsFrame
+UIPadding.Parent = SectionFrames
 UIPadding.PaddingLeft = UDim.new(0, 5)
 UIPadding.PaddingTop = UDim.new(0, 5)
 SupportFrame.Name = "SupportFrame"
-SupportFrame.Parent = SectionsFrame
+SupportFrame.Parent = SectionFrames
 SupportFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 SupportFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SupportFrame.BackgroundTransparency = 1.000
@@ -532,7 +532,7 @@ pcall(function()
             end
         end)
         
-        SectionFrames = script.Parent.Parent.SectionsFrame
+        SectionFrames = script.Parent.Parent.SectionFrames
         script.Parent.MouseButton1Click:Connect(function()
             if script.Parent.BackgroundTransparency == 1 then
                 for i,v in next, ButtonsFrame.SectionOne:GetChildren() do
