@@ -374,3 +374,4 @@ function Page:Section(name)
     end
     return Tabs
 end
+return Page
