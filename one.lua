@@ -442,7 +442,7 @@ pcall(function()
         local script = Instance.new('LocalScript', ButtonsFrame)
 
         getgenv().Support = true
-        getgenv().MaxPage = 0
+        getgenv().MaxPage = "0"
     end
     coroutine.wrap(GONKETK_fake_script)()
     local function DEXXMC_fake_script() -- PageLeft.LeftScript 
