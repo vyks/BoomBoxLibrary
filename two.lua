@@ -1,8 +1,8 @@
 wait()
-local SectionFrames = game.CoreGui.NordUi.NordScheme.SectionsFrame
+local SectionFrames = game.CoreGui.NordUi.NordScheme.SectionFrames
 TsGet = game:GetService("TweenService")
-local declined = ("<font color='rgb(210, 60, 65)'>%s</font>")
-local accepted = ("<font color='rgb(80, 220, 95)'>%s</font>")
+getgenv().declined = ("<font color='rgb(210, 60, 65)'>%s</font>")
+getgenv().accepted = ("<font color='rgb(80, 220, 95)'>%s</font>")
 
 local Page = {}
 function Page:Section(name)
@@ -11,7 +11,7 @@ function Page:Section(name)
 
     local ButtonSection = Instance.new("Frame")
     ButtonSection.Name = name
-    ButtonSection.Parent = script.Parent
+    ButtonSection.Parent = game.CoreGui.NordUi.NordScheme.ButtonsFrame
     ButtonSection.AnchorPoint = Vector2.new(0.5, 0.5)
     ButtonSection.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
     ButtonSection.BackgroundTransparency = 1.000
@@ -78,7 +78,7 @@ function Page:Section(name)
 
         local WindowFrame = Instance.new("Frame")
         WindowFrame.Name = properties.Name .. "Window"
-        WindowFrame.Parent = script.Parent.Parent.SectionsFrame
+        WindowFrame.Parent = SectionFrames
         WindowFrame.AnchorPoint = Vector2.new(0.5, 0.5)
         WindowFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         WindowFrame.BackgroundTransparency = 1.000
