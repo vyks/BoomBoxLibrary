@@ -534,23 +534,16 @@ pcall(function()
         SectionFrames = script.Parent.Parent.SectionFrames
         script.Parent.MouseButton1Click:Connect(function()
             if script.Parent.BackgroundTransparency == 1 then
-                for i,v in next, ButtonsFrame.SectionOne:GetChildren() do
-                    if v:IsA("TextButton") then
-                        TsGet:Create(
-                            v.Frame,
-                            tweeninfo,
-                            OutFaderGoal
-                        ):Play()
-                    end
-                end
-                for i,v in next, ButtonsFrame.SectionTwo:GetChildren() do
-                    if v:IsA("TextButton") then
-                        TsGet:Create(
-                            v.Frame,
-                            tweeninfo,
-                            OutFaderGoal
-                        ):Play()
-                    end
+                for i,v in next, SectionFrames:GetChildren() do
+                    if v:IsA("Frame") then
+                        for i,v in next v:GetChildren() do
+                            TsGet:Create(
+                                v.Frame,
+                                tweeninfo,
+                                OutFaderGoal
+                                ):Play()
+                        end
+                   end
                 end
                 getgenv().Support = not getgenv().Support
                 Selected:Play()
