@@ -1,8 +1,8 @@
 wait()
 local SectionFrames = game.CoreGui.NordUi.NordScheme.SectionFrames
 TsGet = game:GetService("TweenService")
-getgenv().declined = ("<font color='rgb(210, 60, 65)'>%s</font>")
-getgenv().accepted = ("<font color='rgb(80, 220, 95)'>%s</font>")
+getgenv().decline = ("<font color='rgb(210, 60, 65)'>%s</font>")
+getgenv().accept = ("<font color='rgb(80, 220, 95)'>%s</font>")
 
 local Page = {}
 function Page:Section(name)
